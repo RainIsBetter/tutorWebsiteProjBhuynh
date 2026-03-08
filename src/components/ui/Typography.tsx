@@ -20,7 +20,7 @@ export function SectionEyebrow<T extends ElementType = 'p'>({
 
   return (
     <Component
-      className={joinClasses('font-body text-base font-semibold text-black', className)}
+      className={joinClasses('font-body text-base font-semibold text-ui-text-primary', className)}
       {...props}
     >
       {children}
@@ -39,7 +39,7 @@ export function SectionTitle<T extends ElementType = 'h2'>({
   return (
     <Component
       className={joinClasses(
-        'font-heading font-bold leading-[1.1] tracking-[-0.02em] text-black',
+        'font-heading font-bold leading-[1.1] tracking-[-0.02em] text-ui-text-primary',
         className,
       )}
       {...props}
@@ -59,7 +59,7 @@ export function SectionBody<T extends ElementType = 'p'>({
 
   return (
     <Component
-      className={joinClasses('font-body leading-[1.5] text-black/85', className)}
+      className={joinClasses('font-body leading-[1.5] text-ui-text-muted', className)}
       {...props}
     >
       {children}

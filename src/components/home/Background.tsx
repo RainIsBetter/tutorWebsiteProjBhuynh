@@ -6,10 +6,10 @@ import { SectionBody, SectionEyebrow, SectionTitle } from '../ui/Typography'
 
 export function Background() {
   return (
-    <section id="background" className="w-full bg-white px-[5%] py-16 md:px-16 md:py-28">
+    <section id="background" className="w-full bg-ui-surface-base px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="flex flex-col gap-8 text-[#06080b]">
+          <div className="flex flex-col gap-8 text-ui-text-primary">
             <div>
               <SectionEyebrow className="mb-4">Background</SectionEyebrow>
               <SectionTitle
@@ -18,7 +18,7 @@ export function Background() {
               >
                 Experienced tutor dedicated to student success
               </SectionTitle>
-              <SectionBody className="text-[18px] leading-[1.5] text-[#06080b]">
+              <SectionBody className="text-[18px] leading-[1.5] text-ui-text-primary">
                 I am a high school math and science tutor with over a decade of
                 experience working with diverse learners across public and private
                 schools. My approach is structured, patient, and results-focused,
@@ -33,28 +33,28 @@ export function Background() {
 
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               <div className="flex flex-col items-start gap-4">
-                <GraduationCap className="size-12 text-[#06080b]" aria-hidden="true" />
+                <GraduationCap className="size-12 text-ui-text-primary" aria-hidden="true" />
                 <SectionTitle
                   as="h3"
                   className="text-[22px] leading-[1.4] tracking-[-0.22px]"
                 >
                   What I teach
                 </SectionTitle>
-                <SectionBody className="text-base text-[#06080b]">
+                <SectionBody className="text-base text-ui-text-primary">
                   I tutor up to AB Calculus for math and AP Biology, AP
                   Chemistry, and AP Physics for Science.
                 </SectionBody>
               </div>
 
               <div className="flex flex-col items-start gap-4">
-                <Brain className="size-12 text-[#06080b]" aria-hidden="true" />
+                <Brain className="size-12 text-ui-text-primary" aria-hidden="true" />
                 <SectionTitle
                   as="h3"
                   className="text-[22px] leading-[1.4] tracking-[-0.22px]"
                 >
                   How I teach
                 </SectionTitle>
-                <SectionBody className="text-base text-[#06080b]">
+                <SectionBody className="text-base text-ui-text-primary">
                   I specialize in breaking down complex concepts into clear,
                   manageable steps.
                 </SectionBody>

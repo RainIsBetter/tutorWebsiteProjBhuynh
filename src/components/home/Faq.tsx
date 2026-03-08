@@ -46,14 +46,14 @@ const faqItems = [
 
 export function Faq() {
   return (
-    <section id="faq" className="w-full bg-white px-[5%] py-16 md:px-16 md:py-28">
+    <section id="faq" className="w-full bg-ui-surface-base px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-12 md:gap-16 lg:gap-20">
         <div className="w-full max-w-[768px]">
           <SectionEyebrow className="mb-4">FAQ</SectionEyebrow>
           <SectionTitle className="mb-6 text-[2rem] leading-[1.2] tracking-[-0.02em] md:text-[52px] md:tracking-[-0.52px]">
             Questions
           </SectionTitle>
-          <SectionBody className="text-[18px] leading-[1.5] text-[#06080b]">
+          <SectionBody className="text-[18px] leading-[1.5] text-ui-text-primary">
             Find answers to what matters most about starting your tutoring
             journey.
           </SectionBody>
@@ -61,11 +61,11 @@ export function Faq() {
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:gap-x-16">
           {faqItems.map((item) => (
-            <article key={item.question} className="text-[#06080b]">
+            <article key={item.question} className="text-ui-text-primary">
               <SectionTitle as="h3" className="mb-4 text-[22px] leading-[1.4] tracking-[-0.22px]">
                 {item.question}
               </SectionTitle>
-              <SectionBody className="text-base leading-[1.5] text-[#06080b]">
+              <SectionBody className="text-base leading-[1.5] text-ui-text-primary">
                 {item.answer}
               </SectionBody>
             </article>

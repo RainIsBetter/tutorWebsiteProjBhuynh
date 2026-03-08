@@ -5,6 +5,30 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-heading: 'Wix Madefor Display';
+    --font-body: 'Inter';
+
+    --color-ui-surface-base: #ffffff;
+    --color-ui-surface-muted: #e2eaf8;
+    --color-ui-surface-dark: #1e2023;
+
+    --color-ui-text-primary: #06080b;
+    --color-ui-text-muted: #1e2023d9;
+    --color-ui-text-inverse: #ffffff;
+    --color-ui-text-inverse-muted: #ffffffcc;
+
+    --color-ui-brand: #5e8ed8;
+    --color-ui-brand-hover: #4f80cb;
+    --color-ui-brand-soft: #cbd5e3;
+    --color-ui-brand-soft-hover: #c1ccdc;
+
+    --color-ui-border-subtle: #00000026;
+    --color-ui-divider-inverse: #ffffff33;
+  }
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
   }
@@ -16,7 +40,7 @@
   }
 
   body {
-    @apply font-body text-black antialiased;
+    @apply bg-ui-surface-base font-body text-ui-text-primary antialiased;
   }
 
   h1,

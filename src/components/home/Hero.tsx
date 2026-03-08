@@ -6,10 +6,10 @@ import { SectionBody, SectionTitle } from '../ui/Typography'
 
 export function Hero() {
   return (
-    <section id="hero" className="w-full bg-[#e2eaf8] px-[5%] py-16 md:px-16 md:py-28">
+    <section id="hero" className="w-full bg-ui-surface-muted px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-8 text-[#06080b]">
+          <div className="flex flex-col gap-8 text-ui-text-primary">
             <SectionTitle
               as="h1"
               className="text-[2.5rem] leading-[1.2] tracking-[-0.02em] md:text-[3.5rem] lg:text-[72px] lg:tracking-[-0.72px]"
@@ -17,7 +17,7 @@ export function Hero() {
               Master math and science with expert guidance
             </SectionTitle>
 
-            <SectionBody className="max-w-[40rem] text-[18px] leading-[1.5] text-[#06080b]">
+            <SectionBody className="max-w-[40rem] text-[18px] leading-[1.5] text-ui-text-primary">
               I teach math and science to students who want to understand the
               fundamentals and excel in their studies. Whether you&apos;re
               struggling with algebra or need help with physics, I&apos;m here to

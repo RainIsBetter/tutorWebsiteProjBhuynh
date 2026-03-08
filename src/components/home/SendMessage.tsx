@@ -4,7 +4,7 @@ import { SectionBody, SectionEyebrow, SectionTitle } from '../ui/Typography'
 
 export function SendMessage() {
   return (
-    <section id="sendmessage" className="w-full bg-[#e2eaf8] px-[5%] py-16 md:px-16 md:py-28">
+    <section id="sendmessage" className="w-full bg-ui-surface-muted px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="overflow-hidden rounded-[40px]">
           <img
@@ -14,7 +14,7 @@ export function SendMessage() {
           />
         </div>
 
-        <div className="text-[#06080b]">
+        <div className="text-ui-text-primary">
           <div className="mb-8 md:mb-10">
             <SectionEyebrow className="mb-4">Connect</SectionEyebrow>
             <SectionTitle
@@ -23,60 +23,60 @@ export function SendMessage() {
             >
               Send a message
             </SectionTitle>
-            <SectionBody className="text-[18px] leading-[1.5] text-[#06080b]">
+            <SectionBody className="text-[18px] leading-[1.5] text-ui-text-primary">
               Fill out the form below to contact me.
             </SectionBody>
           </div>
 
           <form className="grid grid-cols-1 gap-6">
             <div className="grid w-full items-center">
-              <Label htmlFor="first-name" className="mb-2 text-sm font-semibold text-[#06080b]">
+              <Label htmlFor="first-name" className="mb-2 text-sm font-semibold text-ui-text-primary">
                 First name
               </Label>
               <Input
                 type="text"
                 id="first-name"
-                className="h-12 rounded-xl border-black/15 bg-white px-4 text-base text-[#06080b]"
+                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
               />
             </div>
 
             <div className="grid w-full items-center">
-              <Label htmlFor="last-name" className="mb-2 text-sm font-semibold text-[#06080b]">
+              <Label htmlFor="last-name" className="mb-2 text-sm font-semibold text-ui-text-primary">
                 Last name
               </Label>
               <Input
                 type="text"
                 id="last-name"
-                className="h-12 rounded-xl border-black/15 bg-white px-4 text-base text-[#06080b]"
+                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
               />
             </div>
 
             <div className="grid w-full items-center">
-              <Label htmlFor="email" className="mb-2 text-sm font-semibold text-[#06080b]">
+              <Label htmlFor="email" className="mb-2 text-sm font-semibold text-ui-text-primary">
                 Email
               </Label>
               <Input
                 type="email"
                 id="email"
-                className="h-12 rounded-xl border-black/15 bg-white px-4 text-base text-[#06080b]"
+                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
               />
             </div>
 
             <div className="grid w-full items-center">
-              <Label htmlFor="message" className="mb-2 text-sm font-semibold text-[#06080b]">
+              <Label htmlFor="message" className="mb-2 text-sm font-semibold text-ui-text-primary">
                 Message
               </Label>
               <Textarea
                 id="message"
                 placeholder="Type your message..."
-                className="min-h-[11.25rem] rounded-xl border-black/15 bg-white px-4 py-3 text-base text-[#06080b]"
+                className="min-h-[11.25rem] rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 py-3 text-base text-ui-text-primary"
               />
             </div>
 
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center rounded-[12px] bg-[#5e8ed8] px-3 py-1.5 font-body text-base font-medium text-white transition hover:bg-[#4f80cb]"
+                className="inline-flex items-center rounded-[12px] bg-ui-brand px-3 py-1.5 font-body text-base font-medium text-ui-text-inverse transition hover:bg-ui-brand-hover"
               >
                 Send message
               </button>

@@ -3,9 +3,9 @@ import { SectionBody, SectionTitle } from '../ui/Typography'
 
 export function Testimonial() {
   return (
-    <section id="testimonial" className="w-full bg-[#e2eaf8] px-[5%] py-16 md:px-16 md:py-28">
+    <section id="testimonial" className="w-full bg-ui-surface-muted px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto w-full max-w-[1280px]">
-        <div className="mx-auto flex w-full max-w-[768px] flex-col items-center gap-8 text-center text-[#06080b]">
+        <div className="mx-auto flex w-full max-w-[768px] flex-col items-center gap-8 text-center text-ui-text-primary">
           <div className="flex items-center justify-center gap-1">
             <BiSolidQuoteLeft className="size-12 md:size-14" aria-hidden="true" />
             <BiSolidStar className="size-5" />

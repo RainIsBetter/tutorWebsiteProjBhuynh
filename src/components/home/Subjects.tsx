@@ -32,17 +32,17 @@ const subjects: { title: string; description: string; icon: LucideIcon }[] = [
 
 export function Subjects() {
   return (
-    <section id="subjects" className="w-full bg-white px-[5%] py-16 md:px-16 md:py-28">
+    <section id="subjects" className="w-full bg-ui-surface-base px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-14 md:gap-20">
-        <div className="flex w-full max-w-[768px] flex-col items-center gap-4 text-center text-[#06080b]">
-          <SectionEyebrow className="text-[16px] font-semibold text-[#06080b]">
+        <div className="flex w-full max-w-[768px] flex-col items-center gap-4 text-center text-ui-text-primary">
+          <SectionEyebrow className="text-[16px] font-semibold text-ui-text-primary">
             Subjects
           </SectionEyebrow>
           <div className="flex w-full flex-col gap-6">
             <SectionTitle className="text-[2rem] leading-[1.2] tracking-[-0.02em] md:text-[52px] md:tracking-[-0.52px]">
               What I teach and how it works
             </SectionTitle>
-            <SectionBody className="text-[18px] leading-[1.5] text-[#06080b]">
+            <SectionBody className="text-[18px] leading-[1.5] text-ui-text-primary">
               I focus on core subjects with proven methods that help students
               grasp concepts and retain them. Each lesson builds on what you
               already know.
@@ -57,9 +57,9 @@ export function Subjects() {
             return (
               <article
                 key={subject.title}
-                className="flex min-h-px min-w-px flex-col items-center gap-6 text-center text-[#06080b]"
+                className="flex min-h-px min-w-px flex-col items-center gap-6 text-center text-ui-text-primary"
               >
-                <Icon className="size-12 text-[#06080b]" strokeWidth={2} aria-hidden="true" />
+                <Icon className="size-12 text-ui-text-primary" strokeWidth={2} aria-hidden="true" />
 
                 <div className="flex w-full flex-col gap-4">
                   <SectionTitle
@@ -68,7 +68,7 @@ export function Subjects() {
                   >
                     {subject.title}
                   </SectionTitle>
-                  <SectionBody className="text-[16px] leading-[1.5] text-[#06080b]">
+                  <SectionBody className="text-[16px] leading-[1.5] text-ui-text-primary">
                     {subject.description}
                   </SectionBody>
                 </div>

@@ -7,7 +7,7 @@ import { CalendlyLink } from '../ui/CalendlyLink'
 
 export function WhyChooseMe() {
   return (
-    <section id="whychooseme" className="w-full bg-[#e2eaf8] px-[5%] py-16 md:px-16 md:py-28">
+    <section id="whychooseme" className="w-full bg-ui-surface-muted px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="flex flex-col items-start gap-12 md:gap-16 lg:gap-20">
           <div className="w-full max-w-[768px]">

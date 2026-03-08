@@ -71,8 +71,8 @@ export default {
 
     extend: {
       fontFamily: {
-        heading: ['Wix Madefor Display', 'Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Inter', 'system-ui', 'sans-serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
 
       spacing: {
@@ -109,6 +109,31 @@ export default {
       },
 
       colors: {
+        ui: {
+          surface: {
+            base: "var(--color-ui-surface-base)",
+            muted: "var(--color-ui-surface-muted)",
+            dark: "var(--color-ui-surface-dark)",
+          },
+          text: {
+            primary: "var(--color-ui-text-primary)",
+            muted: "var(--color-ui-text-muted)",
+            inverse: "var(--color-ui-text-inverse)",
+            "inverse-muted": "var(--color-ui-text-inverse-muted)",
+          },
+          brand: {
+            DEFAULT: "var(--color-ui-brand)",
+            hover: "var(--color-ui-brand-hover)",
+            soft: "var(--color-ui-brand-soft)",
+            "soft-hover": "var(--color-ui-brand-soft-hover)",
+          },
+          border: {
+            subtle: "var(--color-ui-border-subtle)",
+          },
+          divider: {
+            inverse: "var(--color-ui-divider-inverse)",
+          },
+        },
         brand: {
           black: "#000000",
           white: "#ffffff",

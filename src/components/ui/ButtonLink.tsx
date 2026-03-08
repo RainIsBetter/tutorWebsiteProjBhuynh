@@ -8,8 +8,10 @@ const baseClasses =
   'inline-flex h-16 items-center rounded-[1.05rem] px-7 font-body text-[1.8rem] font-medium transition'
 
 const variantClasses: Record<NonNullable<ButtonLinkProps['variant']>, string> = {
-  primary: 'bg-[#5e8ed8] text-white hover:bg-[#4f80cb] h-auto rounded-[12px] px-3 py-1.5 text-base',
-  secondary: 'bg-[#cbd5e3] text-black hover:bg-[#c1ccdc] h-auto rounded-[12px] bg-black/5 px-3 py-1.5 text-base text-[#06080b] hover:bg-black/10',
+  primary:
+    'h-auto rounded-[12px] bg-ui-brand px-3 py-1.5 text-base text-ui-text-inverse hover:bg-ui-brand-hover',
+  secondary:
+    'h-auto rounded-[12px] bg-ui-brand-soft px-3 py-1.5 text-base text-ui-text-primary hover:bg-ui-brand-soft-hover',
 }
 
 export function ButtonLink({
