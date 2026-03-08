@@ -77,7 +77,7 @@ export function Faq() {
             Still curious?
           </SectionTitle>
           <SectionBody className="mb-6 text-base">Drop me a message!</SectionBody>
-          <ButtonLink href="#">
+          <ButtonLink href="#sendmessage">
             Send message
           </ButtonLink>
         </div>
