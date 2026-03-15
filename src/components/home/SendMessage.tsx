@@ -1,8 +1,35 @@
-import { Input, Label, Textarea } from '@relume_io/relume-ui'
+import { Input, Label } from '@relume_io/relume-ui'
 import sendMessageImage from '../../assets/message-us.jpg'
 import { SectionBody, SectionEyebrow, SectionTitle } from '../ui/Typography'
+import { type FormEvent, useState } from 'react'
+
+const CONTACT_EMAIL = 'bhuynh@tutorstudio.dev'
 
 export function SendMessage() {
+  const [fields, setFields] = useState<FormFields>({ name: '' })
+  const [submitMessage, setSubmitMessage] = useState('')
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const name = fields.name.trim()
+    const subject = 'Tutoring inquiry'
+    const body = [
+      'Hello Bon,',
+      '',
+      'I would like to learn more about tutoring sessions.',
+      '',
+      `Name: ${name || 'Not provided'}`,
+      '',
+      'Thanks,',
+      name || 'Prospective student',
+    ].join('\n')
+
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer')
+
+    setSubmitMessage('Gmail compose opened in a new tab with a pre-filled draft.')
+  }
   return (
     <section id="sendmessage" className="w-full bg-ui-surface-muted px-[5%] py-16 md:px-16 md:py-28">
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -24,64 +51,42 @@ export function SendMessage() {
               Send a message
             </SectionTitle>
             <SectionBody className="text-[18px] leading-[1.5] text-ui-text-primary">
-              Fill out the form below to contact me.
+              Share your name and we'll open a pre-filled email draft for you.
             </SectionBody>
           </div>
-
-          <form className="grid grid-cols-1 gap-6">
+            <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
             <div className="grid w-full items-center">
-              <Label htmlFor="first-name" className="mb-2 text-sm font-semibold text-ui-text-primary">
-                First name
+              <Label htmlFor="name" className="mb-2 text-sm font-semibold text-[#06080b]">
+                Name
               </Label>
               <Input
                 type="text"
-                id="first-name"
-                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
-              />
-            </div>
-
-            <div className="grid w-full items-center">
-              <Label htmlFor="last-name" className="mb-2 text-sm font-semibold text-ui-text-primary">
-                Last name
-              </Label>
-              <Input
-                type="text"
-                id="last-name"
-                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
-              />
-            </div>
-
-            <div className="grid w-full items-center">
-              <Label htmlFor="email" className="mb-2 text-sm font-semibold text-ui-text-primary">
-                Email
-              </Label>
-              <Input
-                type="email"
-                id="email"
-                className="h-12 rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 text-base text-ui-text-primary"
-              />
-            </div>
-
-            <div className="grid w-full items-center">
-              <Label htmlFor="message" className="mb-2 text-sm font-semibold text-ui-text-primary">
-                Message
-              </Label>
-              <Textarea
-                id="message"
-                placeholder="Type your message..."
-                className="min-h-[11.25rem] rounded-xl border-ui-border-subtle bg-ui-surface-base px-4 py-3 text-base text-ui-text-primary"
+                id="name"
+                name="name"
+                value={fields.name}
+                onChange={(event) => setFields({ name: event.target.value })}
+                className="h-12 rounded-xl border-black/15 bg-white px-4 text-base text-[#06080b]"
               />
             </div>
 
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center rounded-[12px] bg-ui-brand px-3 py-1.5 font-body text-base font-medium text-ui-text-inverse transition hover:bg-ui-brand-hover"
+                className="inline-flex items-center rounded-[12px] bg-[#5e8ed8] px-3 py-1.5 font-body text-base font-medium text-white transition hover:bg-[#4f80cb]"
               >
-                Send message
+                Open Gmail draft
               </button>
+
+              <p className="mt-3 text-sm text-[#06080b]">
+                Prefer your own email client? Send directly to{' '}
+                <span className="select-all font-semibold">{CONTACT_EMAIL}</span>
+              </p>
+
+              {submitMessage ? <p className="mt-3 text-sm text-[#06080b]">{submitMessage}</p> : null}
             </div>
           </form>
+
+          
         </div>
       </div>
     </section>
