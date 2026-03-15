@@ -5,6 +5,10 @@ import { type FormEvent, useState } from 'react'
 
 const CONTACT_EMAIL = 'bhuynh@tutorstudio.dev'
 
+type FormFields = {
+  name: string
+}
+
 export function SendMessage() {
   const [fields, setFields] = useState<FormFields>({ name: '' })
   const [submitMessage, setSubmitMessage] = useState('')
